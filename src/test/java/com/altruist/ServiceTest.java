@@ -55,11 +55,12 @@ public class ServiceTest {
 		assertEquals("ram",user.get(0).getName());
 	}
 	
-//	@ParameterizedTest(name = "{0} toUpperCase is {1}")
-//	@CsvSource(value = { "abcd, ABCD", "abc, ABC", "'',''", "abcdefg, ABCDEFG" })
-//	void uppercase(String word, String capitalizedWord) {
-//		assertEquals(capitalizedWord, word.toUpperCase());
-//	}
+	@ParameterizedTest(name = "{0} toUpperCase is {1}")
+	@CsvSource(value = { "abcd, ABCD", "abc, ABC", "'',''", "abcdefg, ABCDEFG" })
+	@Disabled
+	void uppercase(String word, String capitalizedWord) {
+		assertEquals(capitalizedWord, word.toUpperCase());
+	}
 	
 	@Test
 	@DisplayName("When length is null, throw an exception")
